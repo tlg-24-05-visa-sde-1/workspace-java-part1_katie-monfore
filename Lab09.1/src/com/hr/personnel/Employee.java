@@ -18,7 +18,7 @@ import java.time.LocalDate;
  * Methods (excluding get/set methods): void work()        simulates work by printing a message to
  * show it was called. String toString()  self-explanatory.
  */
-public abstract class Employee {
+public abstract class Employee implements Taxpayer {
 
   // fields
   private String name;
