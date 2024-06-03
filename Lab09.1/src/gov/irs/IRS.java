@@ -8,6 +8,8 @@
  
 package gov.irs;
 
+import com.hr.personnel.HourlyEmployee;
+
 /**
  * The IRS maintains a collection of TaxPayers and collects taxes from them.
  *
@@ -22,6 +24,7 @@ public class IRS {
         for (int i = 0; i < currentIndex; i++) {
             payers[i].fileReturn();
             payers[i].payTaxes();
+            System.out.println();
         }
     }
     
@@ -29,5 +32,8 @@ public class IRS {
     // what types of objects can be passed to this method?
     public void register(TaxPayer payer) {
         payers[currentIndex++] = payer;
+    }
+
+    public void register(HourlyEmployee john) {
     }
 }

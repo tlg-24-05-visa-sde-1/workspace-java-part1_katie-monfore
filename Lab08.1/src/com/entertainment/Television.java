@@ -21,7 +21,7 @@ public class Television {
     private DisplayType display = DisplayType.LED;
 
     //television HAS a Tuner
-    private Tuner tuner = new Tuner(); //instantiated internally, NOT exposed (so its private!)
+    private final Tuner tuner = new Tuner(); //instantiated internally, NOT exposed (so its private!)
 
     //constructors
 
@@ -54,7 +54,7 @@ public class Television {
     }
 
     public void turnOn() {
-        boolean isConneced = verifyInternetConnection();
+        boolean isConnected = verifyInternetConnection();
         System.out.println("Turning on your " + brand + " TV.");
         System.out.println("Volume is " + volume);
     }
@@ -142,6 +142,7 @@ public class Television {
     public String toString() {
         String volumeString = isMuted() ? "<muted>" : String.valueOf(getVolume());
 
-        return String.format("Television: brand=%s, volume=%s, display=%s, currentChannel=%s", getBrand(), volumeString, getDisplay(), getCurrentChannel());
+        return String.format("Television: brand=%s, volume=%s, display=%s, " +
+                "currentChannel=%s", getBrand(), volumeString, getDisplay(), getCurrentChannel());
     }
 }

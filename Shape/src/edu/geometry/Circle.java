@@ -16,5 +16,7 @@ public class Circle implements Shape {
         return radius;
     }
 
+    public double getCircumference() {
+        return 2 * Math.PI * radius;
+    }
 }
-

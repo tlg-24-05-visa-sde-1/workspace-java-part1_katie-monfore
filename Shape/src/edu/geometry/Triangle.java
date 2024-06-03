@@ -12,14 +12,15 @@ public class Triangle implements Shape {
         this.sideA = sideA;
         this.sideB = sideB;
         this.angleBetween = angleBetween;
-
-
-
     }
 
     @Override
     public double getArea() {
         return .5*sideA*sideB * Math.sin(Math.toRadians(angleBetween));
     }
-}
 
+    public double getPerimeter() {
+        return sideA+sideB+angleBetween;
+    }
+
+}

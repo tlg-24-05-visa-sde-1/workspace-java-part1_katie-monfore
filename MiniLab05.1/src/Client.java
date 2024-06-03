@@ -10,7 +10,7 @@ class Client {
 
     // you can run each of these independently, by uncommenting the one you want
     public static void main(String[] args) {
-//         passByValue();
+         passByValue();
          passByReference();
     }
 
